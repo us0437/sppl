@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensor Data - Sanrachna Prahari</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sensor.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="company-info">
+            <h1>Sanrachna Prahari Pvt Ltd</h1>
+            <p>(An IIT Delhi Company)</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="sensor-container">
+            <div class="sensor-info">
+                <h2 id="sensor-title">SENSOR N</h2>
+                <a href="index.html" class="back-btn">Back to Main View</a>
+            </div>
+            
+            <div class="graph-container">
+                <canvas id="sensorChart"></canvas>
+            </div>
+            
+            <div class="data-info">
+                <div class="qr-section">
+                    <h3>SCAN THE QR CODE FOR CSV FILE</h3>
+                    <div id="qrcode"></div>
+                </div>
+                <div class="data-controls">
+                    <button id="load-data" onclick="loadSampleData()">Load Sample Data</button>
+                    <input type="file" id="csv-upload" accept=".csv" onchange="handleFileUpload(event)">
+                    <label for="csv-upload">Upload CSV</label>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Sanrachna Prahari Pvt Ltd. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <script src="js/graph.js"></script>
+</body>
+</html>

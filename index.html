@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanrachna Prahari - 3D Steel Frame</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+</head>
+<body>
+    <header>
+        <div class="company-info">
+            <h1>Sanrachna Prahari Pvt Ltd</h1>
+            <p>(An IIT Delhi Company)</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="left-panel">
+                <div class="project-info">
+                    <h2>PROJECT NAME</h2>
+                    <p>3D Steel Frame</p>
+                    
+                    <h2>PROJECT LOCATION</h2>
+                    <div id="location">Delhi, India</div>
+                    
+                    <h2>SENSOR SELECTION</h2>
+                    <select id="sensor-select" onchange="redirectToSensor()">
+                        <option value="" selected disabled>Select Sensor</option>
+                        <option value="1">SENSOR 1</option>
+                        <option value="2">SENSOR 2</option>
+                        <option value="3">SENSOR 3</option>
+                        <option value="4">SENSOR 4</option>
+                        <option value="5">SENSOR 5</option>
+                    </select>
+                    
+                    <div class="env-data">
+                        <h3>TEMPERATURE/HUMIDITY</h3>
+                        <div id="temp-humidity">
+                            <p>Temperature: <span id="temperature">28°C</span></p>
+                            <p>Humidity: <span id="humidity">65%</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right-panel">
+                <div id="model-container"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Sanrachna Prahari Pvt Ltd. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
